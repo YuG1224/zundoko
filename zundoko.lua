@@ -1,14 +1,13 @@
-zundoko = {"ズン", "ドコ"}
 t = {}
 math.randomseed(os.time())
 while true do
-  input = zundoko[math.random(2)]
-  print(input)
+  zd = ({"ズン", "ドコ"})[math.random(2)]
+  print(zd)
 
   if #t >= 5 then
     table.remove(t, 1)
   end
-  table.insert(t, input)
+  table.insert(t, zd)
 
   if table.concat(t) == "ズンズンズンズンドコ" then
     print("キ・ヨ・シ！")
